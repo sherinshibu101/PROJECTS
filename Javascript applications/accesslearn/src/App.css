@@ -13,17 +13,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 .App-link {
   color: #61dafb;
 }
@@ -39,3 +28,127 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Simonetta:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&display=swap');
+body {
+  font-family: 'Faculty Glyphic', serif;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* In your App.css or a component-specific CSS file where header is styled */
+header {
+  background-color: #a9466f; /* Match the header color */
+  font-family: 'Faculty Glyphic', serif;
+  margin: 0;
+  margin-top: 0; /* Ensure no top margin */
+  margin-bottom: 0; /* Ensure no bottom margin */
+  padding-top: 0; /* Ensure no top padding */
+  padding-bottom: 0; /* Ensure no bottom padding */
+}
+
+main {
+  background-color: #e5a9b8; /* Your pink background color */
+  flex-grow: 1; /* Allow main to take up remaining vertical space */
+  display: flex; /* For the section to be flexible within main */
+  align-items: center; /* Vertically center the section within main */
+  justify-content: center; 
+}
+
+section {
+  /* Styles for your section content */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .faqs-title {
+      font-size: 3rem; 
+    }
+    .faqs-grid {
+      grid-template-columns: repeat(3, 1fr); /* Equivalent to md:grid-cols-3 */
+      max-width: 1152px; /* Approximate for max-w-6xl */
+    }
+  }
+}
+
+.services-gradient {
+  background: linear-gradient(135deg, rgba(255, 219, 219, 0.8) 0%, rgba(252, 197, 197, 0.9) 25%, rgba(247, 183, 212, 0.8) 50%, rgba(230, 185, 235, 0.9) 75%, rgba(250, 227, 212, 0.8) 100%);
+}
+.service-icon-container {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #8d6e63;
+  border-radius: 10px;
+}
+.service-icon {
+  font-size: 36px;
+}
+
+.text-simonetta {
+  font-family: 'Simonetta', serif; 
+}
+
+.text-corinthia{
+  font-family: 'Corinthia', serif; 
+}
+
+.below-main-container-with-bg {
+  background-image: url('../src/assets /Titlepagefront3 (1).jpg'); /* Replace with the actual path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.faqs-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 4rem; /* Equivalent to py-16 */
+  padding-bottom: 4rem; /* Equivalent to py-16 */
+  padding-left: 1rem; /* Equivalent to px-4 */
+  padding-right: 1rem; /* Equivalent to px-4 */
+  background: linear-gradient(135deg, #6b2c70 0%, #8a3e56 50%, #7a2d70 100%);
+}
+
+.faqs-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Equivalent to grid-cols-1 */
+  gap: 2rem; /* Equivalent to gap-8 */
+  max-width: 768px; /* Approximate for max-w-6xl */
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+.faq-item {
+  padding: 1rem; /* Equivalent to p-4 */
+}
+
+.faq-question {
+  margin-bottom: 0.75rem; /* Equivalent to mb-3 */
+}
+
+.below-main-container-part2 {
+  background: linear-gradient(135deg, #6b2c70 0%, #8a3e56 50%, #7a2d70 100%);
+}

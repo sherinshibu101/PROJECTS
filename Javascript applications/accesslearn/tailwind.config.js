@@ -8,6 +8,7 @@ export default {
       fontFamily: {
         'script': ['Dancing Script', 'cursive'],
         'faculty': ['Faculty Glyhpic', 'serif'],
+        'simonetta': ['Simonetta', 'serif']
       },
       colors: {
         'pink': {
