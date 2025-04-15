@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Mic, MicOff, AlertTriangle } from 'lucide-react';
 import Header from '../../components/Header.js'; 
+import ChatAssistant from '../actualfeatures/chatassisstant.js';
 
 export default function Voxify() {
   const [messages, setMessages] = useState([
@@ -198,12 +199,12 @@ export default function Voxify() {
         <Header />
     </header>
     <main>
-    <div className="w-full min-h-screen bg-gradient-to-r from-lime-200 via-lime-100 to-blue-100 flex flex-col items-center justify-center p-4">
+    <div className="w-full min-h-screen bg-gradient-to-r from-lime-200 via-lime-100 to-blue-200 flex flex-col items-center justify-center p-4">
       <h1 className="text-9xl md:text-8xl text-brown-800 mb-2 text-corinthia text-brown-600 px-4 py-4">Voxify</h1>
       
       {/* Browser compatibility warning */}
       {showBrowserWarning && (
-        <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mb-4 rounded shadow-md w-full max-w-md">
+        <div className="bg-yellow-200 border-l-4 border-yellow-600 text-yellow-800 p-4 mb-4 rounded shadow-md w-full max-w-md">
           <div className="flex items-center">
             <AlertTriangle className="flex-shrink-0 mr-2" />
             <div>
@@ -235,8 +236,8 @@ export default function Voxify() {
                     message.isBot 
                       ? message.isSystem 
                         ? 'bg-yellow-500 text-white' 
-                        : 'bg-gray-500 text-white' 
-                      : 'bg-pink-500 text-white'
+                        : 'bg-blue-600 text-white' 
+                      : 'bg-purple-500 text-white'
                   }`}
                   onClick={() => speakText(message.text)}
                 >
@@ -246,7 +247,7 @@ export default function Voxify() {
             ))}
             {isLoading && (
               <div className="flex justify-start mb-2">
-                <div className="bg-gray-400 text-white p-3 rounded-lg">
+                <div className="bg-blue-300 text-white p-3 rounded-lg">
                   Processing...
                 </div>
               </div>
@@ -267,7 +268,7 @@ export default function Voxify() {
             <button 
               type="button"
               onClick={toggleListening}
-              className={`${isListening ? 'bg-red-500 hover:bg-red-600' : speechSupported ? 'bg-blue-500 hover:bg-blue-600' : 'bg-gray-400'} text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
+              className={`${isListening ? 'bg-red-500 hover:bg-red-600' : speechSupported ? 'bg-blue-500 hover:bg-blue-600' : 'bg-green-400'} text-white p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500`}
               disabled={isLoading || !speechSupported}
               title={speechSupported ? "Toggle microphone" : "Speech recognition not supported"}
             >
@@ -275,7 +276,7 @@ export default function Voxify() {
             </button>
             <button 
               type="submit" 
-              className="bg-pink-500 text-white p-2 rounded-lg hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-500"
+              className="bg-blue-500 text-white p-2 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
               disabled={isLoading || !inputMessage.trim()}
             >
               <Send size={20} />
@@ -285,6 +286,7 @@ export default function Voxify() {
       </div>
     </div>
     </main>
+    <ChatAssistant/>
     </div>
   );
 }

@@ -12,7 +12,7 @@ export default function Header(){
             <span className="font-bold font-script text-2xl">AccessLearn</span>
         </Link>
         <nav className="flex items-center gap-4 text-black text-sm">
-          <Link href={'/about'}>About Us</Link>
+          <a href="/help" target="_blank" rel="noopener noreferrer">Help</a>
           <Link href={'/pricing'}>FAQs</Link>
           <Link href={'/contact'}>Contact</Link>
         </nav>

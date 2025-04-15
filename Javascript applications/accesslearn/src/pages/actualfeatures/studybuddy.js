@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send } from 'lucide-react';
 import Header from '../../components/Header.js'; 
+import ChatAssistant from '../actualfeatures/chatassisstant.js';
 
 export default function StudyBuddy() {
     const [messages, setMessages] = useState([
@@ -72,7 +73,6 @@ export default function StudyBuddy() {
       <main>
       <div className="w-full min-h-screen bg-gradient-to-r from-blue-200 via-blue-100 to-yellow-100 flex flex-col items-center justify-center p-4">
         <h1 className="text-9xl md:text-8xl text-brown-800 mb-2 text-corinthia text-brown-600 px-4 py-4">StudyBuddy</h1>
-        
         <div className="w-full max-w-md bg-gray-100 border-2 border-gray-300 rounded-lg overflow-hidden">
           <div className="bg-pink-200 p-4 rounded-lg m-2">
             {/* Chat container */}
@@ -83,7 +83,7 @@ export default function StudyBuddy() {
                   className={`mb-2 ${message.isBot ? '' : 'flex justify-end'}`}
                 >
                   <div className={`p-3 rounded-lg max-w-xs inline-block ${
-                    message.isBot ? 'bg-gray-500 text-white' : 'bg-pink-500 text-white'
+                    message.isBot ? 'bg-blue-400 text-white' : 'bg-pink-400 text-white'
                   }`}>
                     {message.text}
                   </div>
@@ -91,7 +91,7 @@ export default function StudyBuddy() {
               ))}
               {isLoading && (
                 <div className="flex justify-start mb-2">
-                  <div className="bg-gray-400 text-white p-3 rounded-lg">
+                  <div className="bg-blue-500 text-white p-3 rounded-lg">
                     Thinking...
                   </div>
                 </div>
@@ -121,6 +121,7 @@ export default function StudyBuddy() {
             </div>
           </div>
           </main>
+          <ChatAssistant />
           </div>
         );
     }

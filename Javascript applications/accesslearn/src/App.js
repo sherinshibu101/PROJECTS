@@ -1,11 +1,11 @@
 import './App.css';
 import React from 'react';
 import Header from '../src/components/Header.js'; 
-import './App.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentDots, faHandHoldingHeart , faMicrophone } from '@fortawesome/free-solid-svg-icons';
 import frontpageImage from '../src/assets /frontpage.jpg';
 import { Instagram, Github, Linkedin } from 'lucide-react';
+import ChatAssistant from '../src/pages/actualfeatures/chatassisstant.js';
 
 export default function App() {
   return (
@@ -153,6 +153,7 @@ export default function App() {
     </div> 
   </div> 
   </div>
+  <ChatAssistant/>
   </div>
   );
 }

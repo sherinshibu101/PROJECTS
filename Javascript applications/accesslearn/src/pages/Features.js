@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header.js';
-
+import ChatAssistant from '../pages/actualfeatures/chatassisstant.js';
 export default function Features() {
     return(
         <div>
@@ -45,6 +45,7 @@ export default function Features() {
         </div>
         </div>
         </main>
+        <ChatAssistant />
         </div>
     );
 }

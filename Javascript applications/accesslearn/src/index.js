@@ -5,7 +5,9 @@ import Features from '../src/pages/Features.js';
 import StudyBuddy from '../src/pages/actualfeatures/studybuddy.js';
 import Voxify from '../src/pages/actualfeatures/voxify.js'; 
 import ImageScribe from '../src/pages/actualfeatures/imagescribe.js'; 
+import Help from '../src/pages/Help.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Import Routes and Route
+import ChatAssistant from '../src/pages/actualfeatures/chatassisstant';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -18,6 +20,8 @@ root.render(
         <Route path="/studybuddy" element={<StudyBuddy />} />
         <Route path="/voxify" element={<Voxify />} />
         <Route path="/imagescribe" element={<ImageScribe />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/chatassisstant" element={<ChatAssistant/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
