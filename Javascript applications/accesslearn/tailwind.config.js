@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+const webpack = require('webpack');
+const dotenv = require('dotenv').config();
+
 export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -24,6 +27,7 @@ export default {
         },
       },
   },
-  plugins: [],
+  plugins: [ 
+],
 }
 }

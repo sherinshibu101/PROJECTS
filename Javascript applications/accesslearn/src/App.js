@@ -5,6 +5,7 @@ import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentDots, faHandHoldingHeart , faMicrophone } from '@fortawesome/free-solid-svg-icons';
 import frontpageImage from '../src/assets /frontpage.jpg';
+import { Instagram, Github, Linkedin } from 'lucide-react';
 
 export default function App() {
   return (
@@ -33,17 +34,8 @@ export default function App() {
               </h1>
             </div>
             <div className="relative">
-              {/* Decorative leaf element */}
-              <div className="absolute right-0 -top-16">
-                {/* You'd add your leaf SVG or image here */}
-              </div>
-
-              <button
-                onClick={() => (window.location.href = '/services')}
-                className="bg-pink-600 hover:bg-pink-800 text-white py-3 px-6 rounded-lg text-lg font-faculty"
-              >
-                Get Started !
-              </button>
+            <a href="/features" target="_blank" rel="noopener noreferrer" className="bg-pink-600 hover:bg-pink-800 text-white py-3 px-6 rounded-lg text-lg font-faculty">
+            Get Started !</a>
             </div>
           </div>
         </section>
@@ -102,23 +94,19 @@ export default function App() {
     <div className="below-main-container-part2 px-32 py-32">
   <div className="container mx-auto px-4">
     <h1 className="text-7xl text-center md:text-6xl font-light text-white mb-6 leading-relaxed text-corinthia">FAQs</h1>
-    <div className="faqs-grid grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"> {/* Apply grid here */}
-      {/* FAQ Item 1 */}
+    <div className="faqs-grid grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"> 
       <div className="faq-item">
         <h2 className="faq-question text-4xl font-medium text-white text-corinthia">What is AccessLearn?</h2>
         <p className="faq-answer text-xl font-light text-white text-simonetta leading-relaxed">
           AccessLearn is a website which aims to help visually impaired and blind individuals. It aims to provide inclusive learning for everyone so that no one feels left behind.
         </p>
       </div>
-
-      {/* FAQ Item 2 */}
       <div className="faq-item">
         <h2 className="faq-question text-4xl font-medium text-white text-corinthia">Who is AccessLearn for?</h2>
         <p className="faq-answer text-xl font-light text-white text-simonetta leading-relaxed">
           As of now it mainly focuses on providing a tutor for visually impaired and blind school children. I do hope that I will be able to expand and add more services in the future.
         </p>
       </div>
-      {/* FAQ Item 3 */}
       <div className="faq-item">
         <h2 className="faq-question text-4xl font-medium text-white text-corinthia">How much does AccessLearn cost?</h2>
         <p className="faq-answer text-xl font-light text-white text-simonetta leading-relaxed">
@@ -129,8 +117,42 @@ export default function App() {
    </div>
    </div>
    <div className="below-main-container services-gradient px-32 py-32">
-        <div className="container mx-auto px-4"></div>
+   <div className="container mx-auto px-4 flex flex-col md:flex-row"> 
+  <div className="w-full md:w-1/2 flex flex-col items-start justify-center mt-8 md:mt-0 mb-8 md:mb-0">
+    <h1 className="text-7xl md:text-6xl mb-6 leading-relaxed text-corinthia text-amber-900">Thank you so much</h1>
+
+    <p className="text-2xl text-simonetta leading-relaxed text-amber-800 mb-4">
+      Thank you for visiting my site! It's my very first project that I've worked on my own so please do forgive my mistakes. I'm open to suggestions and if you want to collaborate u can connect with me on my socials.
+    </p>
+
+    <div className="text-xl text-simonetta leading-relaxed text-amber-800 mb-4">
+      <p className="mb-1">Email : <a href="mailto:sherinshibu149@gmail.com" className="underline hover:text-amber-700"> sherinshibu149@gmail.com</a></p>
     </div>
+  </div>
+
+  <div className="w-full md:w-1/2 flex flex-col items-start md:items-start justify-center md:ml-32"> 
+    <h2 className="text-6xl md:text-5xl mb-6 leading-relaxed text-corinthia text-amber-900">More About Me</h2>
+
+    <p className="text-xl text-simonetta leading-relaxed mb-4 text-amber-800">
+      I am a third year CS student interested in exploring different technologies and especially, the field of AI. I have a curious mind and that keeps me motivated to do more. I would also love to contribute something good to the society to help others.
+    </p>
+
+    <h3 className="text-xl text-simonetta leading-relaxed mb-3 text-amber-900">Follow me on my socials</h3>
+
+    <div className="flex flex-row gap-4 items-center">
+      <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full border border-amber-800 text-amber-800 hover:bg-amber-800 hover:text-amber-50 transition-colors">
+        <Instagram size={20} />
+      </a>
+      <a href="https://github.com/sherinshibu101" className="flex items-center justify-center w-10 h-10 rounded-full border border-amber-800 text-amber-800 hover:bg-amber-800 hover:text-amber-50 transition-colors">
+        <Github size={20} />
+      </a>
+      <a href="www.linkedin.com/in/sherin-shibu-4628a1319" className="flex items-center justify-center w-10 h-10 rounded-full border border-amber-800 text-amber-800 hover:bg-amber-800 hover:text-amber-50 transition-colors">
+        <Linkedin size={20} />
+      </a>
     </div>
+    </div> 
+  </div> 
+  </div>
+  </div>
   );
 }
