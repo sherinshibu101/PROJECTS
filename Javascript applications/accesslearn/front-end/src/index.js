@@ -7,9 +7,11 @@ import Voxify from '../src/pages/actualfeatures/voxify.js';
 import ImageScribe from '../src/pages/actualfeatures/imagescribe.js'; 
 import Help from '../src/pages/Help.js';
 import Login from '../src/pages/Login.js';
+import Signup from '../src/pages/Signup.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Import Routes and Route
 import ChatAssistant from '../src/pages/actualfeatures/chatassisstant';
 import axios from "axios";
+import PrivateRoute from "../src/auth/PrivateRoute.js"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -25,7 +27,7 @@ root.render(
         <Route path="/help" element={<Help />} />
         <Route path="/chatassisstant" element={<ChatAssistant/>} />
         <Route path="/login" element={<Login />} /> 
-
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

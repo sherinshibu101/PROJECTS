@@ -13,8 +13,8 @@ export default function Header(){
         </Link>
         <nav className="flex items-center gap-4 text-black text-sm">
           <a href="/help" target="_blank" rel="noopener noreferrer">Help</a>
-          <Link href={'/pricing'}>Login</Link>
-          <Link href={'/contact'}>Contact</Link>
+          <a href={'/login'} target="_blank" rel="noopener noreferrer">Login</a>
+          <a href={'/signup'} target="_blank" rel="noopener noreferrer">SignUp</a>
         </nav>
       </div>
       </div>
